@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/02/2014 09:52:13 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.Product" table="PRODUCT">
+        <id name="productId" type="big_decimal">
+            <column name="PRODUCT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="category" type="string">
+            <column name="CATEGORY" length="50" />
+        </property>
+        <property name="department" type="string">
+            <column name="DEPARTMENT" length="50" />
+        </property>
+        <property name="line" type="string">
+            <column name="LINE" length="50" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="50" />
+        </property>
+        <set name="productProspects" table="PRODUCT_PROSPECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PRODUCT_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.beco.portalproveedores.bean.ProductProspect" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">Oracle123</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.1.1:1521:compiere</property>
+        <property name="hibernate.connection.username">PPROVEEDORES</property>
+        <property name="hibernate.default_schema">PPROVEEDORES</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping class="com.beco.portalproveedores.bean.Prospect" resource="com/beco/portalproveedores/bean/Prospect.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.Attachment" resource="com/beco/portalproveedores/bean/Attachment.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.CommercialAgreement" resource="com/beco/portalproveedores/bean/CommercialAgreement.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.Permission" resource="com/beco/portalproveedores/bean/Permission.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.Product" resource="com/beco/portalproveedores/bean/Product.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.ProductProspect" resource="com/beco/portalproveedores/bean/ProductProspect.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.Role" resource="com/beco/portalproveedores/bean/Role.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.RolePermission" resource="com/beco/portalproveedores/bean/RolePermission.hbm.xml" />
+        <mapping class="com.beco.portalproveedores.bean.Country" resource="com/beco/portalproveedores/bean/Country.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

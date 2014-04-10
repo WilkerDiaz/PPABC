@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/02/2014 09:52:13 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.CommercialAgreement" table="COMMERCIAL_AGREEMENT">
+        <id name="commercialAgreementId" type="big_decimal">
+            <column name="COMMERCIAL_AGREEMENT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="attachment" class="com.beco.portalproveedores.bean.Attachment" fetch="select">
+            <column name="ATTACHMENT_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="prospect" class="com.beco.portalproveedores.bean.Prospect" fetch="select">
+            <column name="PROSPECT_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="discGosPerc" type="java.lang.Double">
+            <column name="DISC_GOS_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discGosAmou" type="java.lang.Double">
+            <column name="DISC_GOS_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="discOpeningPerc" type="java.lang.Double">
+            <column name="DISC_OPENING_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discOpeningAmou" type="java.lang.Double">
+            <column name="DISC_OPENING_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="discAfterSalePerc" type="java.lang.Double">
+            <column name="DISC_AFTER_SALE_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discAfterSaleAmou" type="java.lang.Double">
+            <column name="DISC_AFTER_SALE_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="discDeliCentralPerc" type="java.lang.Double">
+            <column name="DISC_DELI_CENTRAL_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discDeliCentralAmou" type="java.lang.Double">
+            <column name="DISC_DELI_CENTRAL_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="discRecogMermaPerc" type="java.lang.Double">
+            <column name="DISC_RECOG_MERMA_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discRecogMermaAmou" type="java.lang.Double">
+            <column name="DISC_RECOG_MERMA_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="discFixedVolumePerc" type="java.lang.Double">
+            <column name="DISC_FIXED_VOLUME_PERC" precision="18" scale="0" />
+        </property>
+        <property name="discFixedVolumeAmou" type="java.lang.Double">
+            <column name="DISC_FIXED_VOLUME_AMOU" precision="18" scale="0" />
+        </property>
+        <property name="firstVarVolDiscFrom" type="java.lang.Double">
+            <column name="FIRST_VAR_VOL_DISC_FROM" precision="18" scale="0" />
+        </property>
+        <property name="firstVarVolDiscTo" type="java.lang.Double">
+            <column name="FIRST_VAR_VOL_DISC_TO" precision="18" scale="0" />
+        </property>
+        <property name="firstVarVolDiscPerc" type="java.lang.Double">
+            <column name="FIRST_VAR_VOL_DISC_PERC" precision="18" scale="0" />
+        </property>
+        <property name="secondVarVolDiscFrom" type="java.lang.Double">
+            <column name="SECOND_VAR_VOL_DISC_FROM" precision="18" scale="0" />
+        </property>
+        <property name="secondVarVolDiscTo" type="java.lang.Double">
+            <column name="SECOND_VAR_VOL_DISC_TO" precision="18" scale="0" />
+        </property>
+        <property name="secondVarVolDiscPerc" type="java.lang.Double">
+            <column name="SECOND_VAR_VOL_DISC_PERC" precision="18" scale="0" />
+        </property>
+        <property name="advertisingContrPerc" type="java.lang.Double">
+            <column name="ADVERTISING_CONTR_PERC" precision="18" scale="0" />
+        </property>
+        <property name="currency" type="string">
+            <column name="CURRENCY" length="50" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

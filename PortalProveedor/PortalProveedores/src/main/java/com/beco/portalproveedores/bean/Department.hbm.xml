@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2014 04:21:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.Department" table="DEPARTMENT">
+        <id name="departmentId" type="big_decimal">
+            <column name="DEPARTMENT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="departmentName" type="string">
+            <column name="DEPARTMENT_NAME" length="100" />
+        </property>
+        <property name="departmentCategory" type="string">
+            <column name="DEPARTMENT_CATEGORY" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

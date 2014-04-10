@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/02/2014 09:52:13 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.Prospect" table="PROSPECT">
+        <id name="prospectId" type="big_decimal">
+            <column name="PROSPECT_ID" precision="22" scale="0" />
+            <generator class="sequence"><param name="sequence">PROSPECT_SEQ</param></generator>
+        </id>
+        <property name="commercialName" type="string">
+            <column name="COMMERCIAL_NAME" length="100" not-null="true" />
+        </property>
+        <property name="rifCi" type="string">
+            <column name="RIF_CI" length="20" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="20" />
+        </property>
+        <property name="phone2" type="string">
+            <column name="PHONE_2" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50" />
+        </property>
+        <property name="website" type="string">
+            <column name="WEBSITE" length="50" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="50" />
+        </property>
+        <property name="statusUpdateDate" type="date">
+            <column name="STATUS_UPDATE_DATE" length="7" />
+        </property>
+        <property name="statusUpdateBy" type="string">
+            <column name="STATUS_UPDATE_BY" length="20" />
+        </property>
+        <property name="statusDetails" type="string">
+            <column name="STATUS_DETAILS" length="50" />
+        </property>
+        <property name="country" type="string">
+            <column name="COUNTRY" length="50" />
+        </property>
+        <property name="contactPerson" type="string">
+            <column name="CONTACT_PERSON" length="50" />
+        </property>
+        <property name="origin" type="string">
+            <column name="ORIGIN" length="50" />
+        </property>
+        <property name="originDetails" type="string">
+            <column name="ORIGIN_DETAILS" length="100" />
+        </property>
+        <property name="observation" type="string">
+            <column name="OBSERVATION" length="500" />
+        </property>
+        <property name="assets" type="string">
+            <column name="ASSETS" length="5" />
+        </property>
+        <property name="products" type="string">
+            <column name="PRODUCTS" length="5" />
+        </property>
+        <property name="services" type="string">
+            <column name="SERVICES" length="5" />
+        </property>
+        <property name="approvedFinance" type="string">
+            <column name="APPROVED_FINANCE" length="5" />
+        </property>
+        <property name="approvedBoss" type="string">
+            <column name="APPROVED_BOSS" length="5" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="500" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="20" />
+        </property>
+        <property name="personType" type="string">
+            <column name="PERSON_TYPE" length="50" />
+        </property>
+        <property name="recordDate" type="date">
+            <column name="RECORD_DATE" length="7" />
+        </property>
+        <property name="economicActivity" type="string">
+            <column name="ECONOMIC_ACTIVITY" length="50" />
+        </property>
+        <property name="paymentCondition" type="string">
+            <column name="PAYMENT_CONDITION" length="50" />
+        </property>
+        <property name="methodPayment" type="string">
+            <column name="METHOD_PAYMENT" length="50" />
+        </property>
+        <property name="bank" type="string">
+            <column name="BANK" length="100" />
+        </property>
+        <property name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="50" />
+        </property>
+        <property name="fiscalName" type="string">
+            <column name="FISCAL_NAME" length="200" />
+        </property>
+        <property name="legalContact" type="string">
+            <column name="LEGAL_CONTACT" length="50" />
+        </property>
+        <property name="legalContactPhone" type="string">
+            <column name="LEGAL_CONTACT_PHONE" length="50" />
+        </property>
+        <property name="legalContactEmail" type="string">
+            <column name="LEGAL_CONTACT_EMAIL" length="50" />
+        </property>
+        <property name="salesContact" type="string">
+            <column name="SALES_CONTACT" length="50" />
+        </property>
+        <property name="salesContactPhone" type="string">
+            <column name="SALES_CONTACT_PHONE" length="50" />
+        </property>
+        <property name="salesContactEmail" type="string">
+            <column name="SALES_CONTACT_EMAIL" length="50" />
+        </property>
+        <property name="adminContact" type="string">
+            <column name="ADMIN_CONTACT" length="50" />
+        </property>
+        <property name="adminContactPhone" type="string">
+            <column name="ADMIN_CONTACT_PHONE" length="50" />
+        </property>
+        <property name="adminContactEmail" type="string">
+            <column name="ADMIN_CONTACT_EMAIL" length="50" />
+        </property>
+        <property name="expirationDateRif" type="string">
+            <column name="EXPIRATION_DATE_RIF" length="50" />
+        </property>
+        <set name="commercialAgreements" table="COMMERCIAL_AGREEMENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PROSPECT_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.beco.portalproveedores.bean.CommercialAgreement" />
+        </set>
+        <set name="productProspects" table="PRODUCT_PROSPECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PROSPECT_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.beco.portalproveedores.bean.ProductProspect" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 28/03/2014 02:09:19 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.ProspectSection" table="PROSPECT_SECTION">
+        <id name="prospectSectionId" type="big_decimal">
+            <column name="PROSPECT_SECTION_ID" precision="22" scale="0" />
+            <generator class="sequence"><param name="sequence">PROSPECT_SECTION_SEQ</param></generator>
+        </id>
+        <many-to-one name="prospect" class="com.beco.portalproveedores.bean.Prospect" fetch="select">
+            <column name="PROSPECT_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="section" class="com.beco.portalproveedores.bean.Section" fetch="select">
+            <column name="SECTION_ID" precision="22" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

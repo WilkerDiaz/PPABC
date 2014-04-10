@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/02/2014 09:52:13 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.RoleUserPortal" table="ROLE_USER_PORTAL">
+        <id name="roleUserPortalId" type="big_decimal">
+            <column name="ROLE_USER_PORTAL_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="rolePortal" type="big_decimal">
+            <column name="ROLE_PORTAL" precision="22" scale="0" />
+        </property>
+        <property name="userPortal" type="big_decimal">
+            <column name="USER_PORTAL" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ProcessPublisherService WSDL service -->
+
+  <service name="ProcessPublisher" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://sistemas.waliria.com"/>
+      <parameter name="wsdlServiceElement" value="ProcessPublisherService"/>
+      <parameter name="schemaQualified" value="http://sistemas.waliria.com"/>
+      <parameter name="wsdlServicePort" value="ProcessPublisher"/>
+      <parameter name="className" value="com.waliria.sistemas.ProcessPublisher"/>
+      <parameter name="wsdlPortType" value="ProcessPublisher"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://sistemas.waliria.com" xmlns:retNS="http://sistemas.waliria.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="manageProcess" qname="operNS:manageProcess" returnQName="retNS:manageProcessReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:AD_Client_ID" type="tns:int"/>
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ProcessName" type="tns:string"/>
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:User" type="tns:string"/>
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:InstanceName" type="tns:string"/>
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:parametersKey" type="tns:string"/>
+        <parameter xmlns:pns="http://sistemas.waliria.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:parametersValue" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="manageProcess"/>
+
+  </service>
+</deployment>

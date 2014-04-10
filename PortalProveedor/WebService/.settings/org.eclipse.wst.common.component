@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WebService">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/common/common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ad.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ad/ad">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="interfaces.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/interfaces/interfaces">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="extend.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/extend/extend">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="base.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/base/base">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="serverRoot.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/serverRoot/serverRoot">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tools.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/tools/tools">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="print.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/print/print">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="WebService"/>
+        <property name="java-output-path" value="/WebService/build/classes"/>
+    </wb-module>
+</project-modules>

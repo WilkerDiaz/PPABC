@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2014 11:08:13 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.beco.portalproveedores.bean.Country" table="COUNTRY">
+        <id name="countryId" type="big_decimal">
+            <column name="COUNTRY_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="countryCode" type="string">
+            <column name="COUNTRY_CODE" length="50" />
+        </property>
+        <property name="countryName" type="string">
+            <column name="COUNTRY_NAME" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
